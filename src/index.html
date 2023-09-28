@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .frame {
+            border: 1px solid blue;
+            margin-top: 80px;
+            height: 450px;
+            width: 500px;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            background-color: gainsboro
+        }
+
+        .title {
+            border: 1px solid dimgray;
+            padding: 10px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .display-box {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: right;
+        }
+
+        .main {
+            border: 1px solid dimgray;
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 5px;
+            padding: 5px;
+        }
+
+        .btn {
+            border: 1px solid black;
+            width: 30px;
+            height: 30px;
+            font-size: 16px;
+            text-align: center;
+            padding: 9px;
+            border-radius: 10px;
+            background-color: antiquewhite;
+        }
+
+        .btn:hover {
+            color: black;
+            background-color: gray;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="frame">
+        <div class="title">计算器</div>
+        <div class="display-box" id="Info">0</div>
+        <div class="main">
+            <div class="row">
+                <div class="btn" onclick="onNumClicked('1')">1</div>
+                <div class="btn" onclick="onNumClicked('2')">2</div>
+                <div class="btn" onclick="onNumClicked('3')">3</div>
+                <div class="btn" onclick="onOpClick('**')">x^</div>
+                <div class="btn" onclick="onBackspaceClick()">⬅</div>
+                <div class="btn" onclick="onOpClick('sin')">sin</div>
+                <div class="btn" onclick="onOpClick('asin')">asin</div>
+            </div>
+            <div class="row">
+                <div class="btn" onclick="onNumClicked('4')">4</div>
+                <div class="btn" onclick="onNumClicked('5')">5</div>
+                <div class="btn" onclick="onNumClicked('6')">6</div>
+                <div class="btn" onclick="onOpClick('(')">(</div>
+                <div class="btn" onclick="onOpClick(')')">)</div>
+                <div class="btn" onclick="onOpClick('cos')">cos</div>
+                <div class="btn" onclick="onOpClick('acos')">acos</div>
+                <div class="btn" onclick="onOpClick('!')">x!</div>
+            </div>
+            <div class="row">
+                <div class="btn" onclick="onNumClicked('7')">7</div>
+                <div class="btn" onclick="onNumClicked('8')">8</div>
+                <div class="btn" onclick="onNumClicked('9')">9</div>
+                <div class="btn" onclick="onOpClick('+')">+</div>
+                <div class="btn" onclick="onOpClick('-')">-</div>
+                <div class="btn" onclick="onOpClick('tan')">tan</div>
+                <div class="btn" onclick="onOpClick('atan')">atan</div>
+                <div class="btn" onclick="onOpClick('√')">√x</div>
+            </div>
+            <div class="row">
+                <div class="btn" onclick="onNumClicked(0)">0</div>
+                <div class="btn" onclick="onClicked('C')">C</div>
+                <div class="btn" onclick="onDecimalPointClick('.')">.</div>
+                <div class="btn" onclick="onOpClick('×')">×</div>
+                <div class="btn" onclick="onOpClick('/')">÷</div>
+                <div class="btn" onclick="onOpClick('ln')">ln</div>
+                <div class="btn" onclick="onOpClick('PI')">π</div>
+                <div class="btn" onclick="onEqualClick()">=</div>
+                
+
+
+            </div>
+        </div>
+    </div>
+    <script src="./calculator.js"></script>
+
+</body>
